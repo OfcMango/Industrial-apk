@@ -169,7 +169,9 @@ class MainActivity : Activity() {
         outgoing.addView(button("●  Start speech recognition", blue, bg) { startSpeechRecognition() }, full())
         speechText = EditText(this).apply {
             hint = "Or type a message here…"
-            setHintTextColor(muted); setTextColor(text); textSize = 16f
+            setHintTextColor(muted)
+            setTextColor(android.graphics.Color.parseColor("#FFFFFF"))
+            textSize = 16f
             setPadding(dp(14), dp(12), dp(14), dp(12)); minLines = 2; maxLines = 5
             background = rounded(surface2, 14)
         }
